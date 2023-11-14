@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Fungsi</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function buatKalimat(nama, umur, alamat, hobi) {
+            var kalimat = "Nama saya " + nama + " umur saya " + umur + " tahun, alamat saya di " + alamat + ", dan saya punya hobi yaitu " + hobi + ".";
+            console.log(kalimat);
+            document.getElementById("output").innerHTML = kalimat;
+        }
+
+        var name = "John Doe";
+        var age = 30;
+        var address = "Jln. Malioboro, Yogyakarta";
+        var hobby = "gaming";
+        buatKalimat(name, age, address, hobby);
+    </script>
+</body>
+</html>

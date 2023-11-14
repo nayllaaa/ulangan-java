@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kendaraan Array Operations</title>
+</head>
+<body>
+
+  <h1>Data Kendaraan</h1>
+
+  <ul id="outputList"></ul>
+
+  <script>
+    let kendaraanArray = [
+      'mobil', 'motor', 'sepeda', 'kapal', 'truk', 'kereta', 'helikopter', 'pesawat', 'jetski', 'hoverboard'
+    ];
+
+    let outputList = document.getElementById('outputList');
+    outputList.innerHTML += "<li>Seluruh data kendaraan: " + kendaraanArray.join(', ') + "</li>";
+
+    let indexMobil = kendaraanArray.indexOf('mobil');
+    outputList.innerHTML += "<li>Indeks dari kendaraan 'mobil': " + indexMobil + "</li>";
+
+    let kendaraanYangDihapus = kendaraanArray.shift();
+    outputList.innerHTML += "<li>Kendaraan yang dihapus: " + kendaraanYangDihapus + "</li>";
+
+    outputList.innerHTML += "<li>Array kendaraan setelah dihapus: " + kendaraanArray.join(', ') + "</li>";
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Matematika</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Kalkulator Matematika</h2>
+
+  <label for="num1">Angka pertama:</label><br>
+  <input type="number" id="num1"><br>
+
+  <label for="num2">Angka kedua:</label><br>
+  <input type="number" id="num2"><br>
+
+  <button onclick="tambah()">Tambah</button>
+  <button onclick="kurang()">Kurang</button>
+  <button onclick="kali()">Kali</button>
+  <button onclick="bagi()">Bagi</button>
+  <button onclick="terbesar()">Bilangan Terbesar</button>
+
+  <h3>Hasil:</h3>
+  <p id="result"></p>
+
+  <script>
+    function tambah() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 + num2;
+      document.getElementById('result').innerHTML = 'Hasil penjumlahan: ' + result;
+    }
+
+    function kurang() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 - num2;
+      document.getElementById('result').innerHTML = 'Hasil pengurangan: ' + result;
+    }
+
+    function kali() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 * num2;
+      document.getElementById('result').innerHTML = 'Hasil perkalian: ' + result;
+    }
+
+    function bagi() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      if (num2 !== 0) {
+        var result = num1 / num2;
+        document.getElementById('result').innerHTML = 'Hasil pembagian: ' + result;
+      } else {
+        document.getElementById('result').innerHTML = 'Error: Pembagi tidak boleh nol.';
+      }
+    }
+
+    function terbesar() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var result = num1 > num2 ? num1 : num2;
+      document.getElementById('result').innerHTML = 'Bilangan terbesar: ' + result;
+    }
+  </script>
+</body>
+</html>
